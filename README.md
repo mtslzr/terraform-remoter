@@ -7,7 +7,7 @@ Simple module to convert a new or existing Terraform setup into using a remote S
 Download the repo, and copy both folders (`deploy_s3_backend` and `modules`) into your working Terraform directory:
 
 ```bash
-git clone git@gitlab.eng.cleardata.com:automation/terraform-remoter
+git clone git@github.com:mtslzr/terraform-remoter
 cp -R terraform-remoter/{deploy_s3_backend,modules} /path/to/my/terraform/
 cd /path/to/my/terraform/
 ```
