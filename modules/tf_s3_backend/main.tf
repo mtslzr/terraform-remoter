@@ -7,8 +7,8 @@ data "aws_caller_identity" "tfstate_current" {}
 resource "aws_s3_bucket" "tfstate-bucket" {
   bucket = "tf-state-${data.aws_caller_identity.tfstate_current.account_id}"
   acl    = "private"
-  tags {
-    Name        = "terraform-remote-state-bucket"
+  tags = {
+    Name = "terraform-remote-state-bucket"
   }
   versioning {
     enabled = true
@@ -19,7 +19,7 @@ resource "aws_s3_bucket" "tfstate-bucket" {
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
-        sse_algorithm     = "AES256"
+        sse_algorithm = "AES256"
       }
     }
   }
